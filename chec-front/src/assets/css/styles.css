@@ -933,7 +933,7 @@ padding: 0 10px;
 .shopping-cart-item, .shopping-cart-quantity {
   display: flex;
   flex-direction: row;
-  justify-content: start;
+  justify-content: flex-start;
   align-items: center;
 }
 .shopping-cart-item-title {
@@ -1592,7 +1592,7 @@ section.ind-top {
   border-top: 2px #949494 solid;
 }
 .ind-top-test {
-  background-image: url("/Desing/Logo-Etiqueta-Originals/CERVECERIA-CHEC-RGB-DIGITAL.png");
+  background-image: url("../images/logo/CERVECERIA-CHEC-RGB-DIGITAL.png");
   background-size: cover;
   background-position: center;
   min-height: 300px;
@@ -1602,7 +1602,7 @@ section.ind-top {
   display: flex;
   margin: auto;
   padding: 30px 0;
-  justify-content: start;
+  justify-content: flex-start;
   min-width: 500px;
 }
 .right-content-test .art-3 {
@@ -1839,7 +1839,7 @@ div.bottom-content{
  .main-header-top-bar {
     display: flex;
     align-items: center;
-    justify-content: start; /* SINO SPACE-BETWEEN que distribuye los elemntos de la barra de una manera homogenea*/
+    justify-content: flex-start; /* SINO SPACE-BETWEEN que distribuye los elemntos de la barra de una manera homogenea*/
     height: 100px;
   }
 
