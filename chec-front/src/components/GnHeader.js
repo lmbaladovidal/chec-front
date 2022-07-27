@@ -1,8 +1,11 @@
-import {Link} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import {useState, useEffect} from 'react'
 import logo from '../assets/images/logo/540x540sqr.png'
 
-function Header() {
+    
+
+
+function GnHeader() {
 
     
     const url= "http://localhost:3001/api/user/profile/5"
@@ -71,15 +74,18 @@ function Header() {
                         <Link to="https://instagram.com/chec.cerveceria?utm_medium=copy_link" target="_blank" className="redes2"><i className="fab fa-instagram"></i></Link>
                     </div>           
                 </div>
-            </header>
+            
             <div>
                 <h2>{user.address}</h2>
                 <h2>{user.name}</h2>
             </div>
+
+           
+        </header>
         </div>
 
      
     );
   }
   
-  export default Header;
+  export default GnHeader;
