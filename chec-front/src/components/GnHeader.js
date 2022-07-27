@@ -1,12 +1,11 @@
-import {Route, Link, Routes} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import {useState, useEffect} from 'react'
 import logo from '../assets/images/logo/540x540sqr.png'
-import About from './About'
 
     
 
 
-function Header() {
+function GnHeader() {
 
     
     const url= "http://localhost:3001/api/user/profile/5"
@@ -81,9 +80,7 @@ function Header() {
                 <h2>{user.name}</h2>
             </div>
 
-            <Routes>
-                <Route path='/quienesSomos' element={<About/>}/>
-            </Routes>
+           
         </header>
         </div>
 
@@ -91,4 +88,4 @@ function Header() {
     );
   }
   
-  export default Header;
+  export default GnHeader;

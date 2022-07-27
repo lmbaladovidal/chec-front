@@ -3,7 +3,7 @@
 // import cerveceria3 from '../assets/images/logo/DSC_0014.jpg'
 // import cerveceria4 from '../assets/images/logo/DSC_0030.jpg'
 
-function About() {
+function GnAbout() {
     return (
         <section className="pd-quienes-somos-area">
 
@@ -48,4 +48,4 @@ function About() {
     );
   }
   
-  export default About;
+  export default GnAbout;
