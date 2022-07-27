@@ -1,7 +1,12 @@
-import {Link} from 'react-router-dom';
+import {Route, Link, Routes} from 'react-router-dom';
 import logo from '../assets/images/logo/540x540sqr.png'
+import About from './About'
+
+    
+
 
 function Header() {
+    
     return (
       
         <header className="main-header">
@@ -55,6 +60,10 @@ function Header() {
                     <Link to="https://instagram.com/chec.cerveceria?utm_medium=copy_link" target="_blank" className="redes2"><i className="fab fa-instagram"></i></Link>
                 </div>           
             </div>
+
+            <Routes>
+                <Route path='/quienesSomos' element={<About/>}/>
+            </Routes>
         </header>
 
      
