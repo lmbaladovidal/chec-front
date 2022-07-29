@@ -4,17 +4,17 @@
 }
 
 :root {
-  --primary: #ff8a00;
+  --primary: #ff4b1d;
   --light: #c4c4c4;
   --grey: #c4c4c4;
 }
+
 
 
 a:hover {
   text-decoration: none;
 }
 
-.bg-primary { background-color: var(--primary) !important; }
 
 .bg-light { background-color: var(--light) !important; }
 
@@ -22,10 +22,9 @@ a:hover {
 
 .bg-mix { background: linear-gradient(180deg, var(--light) 50%, var(--grey) 0); }
 
-.btn-primary {
-  background-color: var(--primary);
-  border: 0;
-}
+.btn-primary { background-color: var(--primary); border: 0;}
+
+.bg-primary-side-bar { background-color: var(--primary) !important; }
 
 
 
