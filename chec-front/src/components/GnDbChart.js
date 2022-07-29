@@ -16,7 +16,7 @@ function GnDbChart() {
 	// 		setProduct(response.data.cervezas)})         
 	// 	.catch(error=>console.log(error))
 	// },[])
-
+        
     const urlUsers= "http://localhost:3001/api/user/users"
     const [users, setUsers] = useState([]);
 
@@ -26,8 +26,7 @@ function GnDbChart() {
 		.then(response=> response.json())
         
 		.then(response=>{
-			console.log(response.data)
-
+			console.log("USUARIOS: "+response.data)
 			setUsers(response.data)})         
 		.catch(error=>console.log(error))
 	},[])
@@ -44,7 +43,15 @@ function GnDbChart() {
                                     <h6 className="font-weight-bold mb-0">Último usuario creado</h6>
                                   </div>
                                   <div className="card-body">
-                                    <h4>{users[users.length-1].name}</h4>
+                                    <div>
+                                      <h3>{users[users.length-1].name+" "+users[users.length-1].lastName}</h3>
+                                      <h5>{users[users.length-1].address}</h5>
+                                      <h5>{users[users.length-1].email}</h5>
+                                      <h5>{users[users.length-1].birthDate}</h5>                                    
+                                    </div>
+                                    <div>
+                                      <img src={users[users.length-1].avatar} className="avatar" ></img>
+                                    </div>
                                   </div>
                               </div>
                           </div>

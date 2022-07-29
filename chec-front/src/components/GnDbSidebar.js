@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 const GnDbSidebar = () => {
     return (
     
-        <div id="sidebar-container" className="bg-primary">
+        <div id="sidebar-container" className="bg-primary-side-bar">
         <div className="logo">
             <h4 className="text-light font-weight-bold mb-0">Dashboard</h4>
         </div>
