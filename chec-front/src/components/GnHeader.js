@@ -1,26 +1,12 @@
 import { Link } from 'react-router-dom';
-import {useState, useEffect} from 'react'
 import logo from '../assets/images/logo/540x540sqr.png'
-
-    
+  
 
 
 function GnHeader() {
 
     
-    const url= "http://localhost:3001/api/user/profile/5"
-    const [user, setUser] = useState([]);
-    
-	useEffect(()=>{
-		console.log("Mount Component")
-		fetch(url, {mode:'cors'})
-		.then(response=> response.json())
-		.then(response=>{
-			//console.log(response)
-			setUser(response.data)})
-		.catch(error=>console.log(error))
-	},[])
-
+   
     return (
         <div>
             <header className="main-header">
@@ -75,13 +61,6 @@ function GnHeader() {
                         <Link to="https://instagram.com/chec.cerveceria?utm_medium=copy_link" target="_blank" className="redes2"><i className="fab fa-instagram"></i></Link>
                     </div>           
                 </div>
-            
-            <div>
-                <h2>{user.address}</h2>
-                <h2>{user.name}</h2>
-            </div>
-
-           
         </header>
         </div>
 
