@@ -4,16 +4,18 @@ import imageHome from '../assets/images/guarda.png'
 
 function GnHome() {
 
-    const url= "http://localhost:3001/api/product/productDetail/4"
-    const [product, setProduct] = useState([]);
+    const url= "http://localhost:3001/api/product/productPage"
+    const [products, setProduct] = useState([]);
     
 	useEffect(()=>{
 		console.log("Mount Component")
 		fetch(url, {mode:'cors'})
 		.then(response=> response.json())
+        
 		.then(response=>{
-			console.log(response)
-			setProduct(response.data)})
+			console.log(response.data.cervezas)
+
+			setProduct(response.data.cervezas)})         
 		.catch(error=>console.log(error))
 	},[])
 
@@ -34,33 +36,30 @@ function GnHome() {
     </section>
 
     <section className="bottom-content">
-
-   
-    
-        <article className="col-12 col-sm-6 col-lg-3 pd-product">
-            <img className="pd-img-product" src={product.image} width="360" alt="beer"/>
-            <div className="pd-datos-cerveza">
-                <h4>{product.name}</h4>
-                <h4>{product.price}</h4>
-                <input type="hidden" value={product.id} name="IdProductToCart" />
-                <button className="pd-seleccionar"><Link to="/product/productDetail/{product.id}" className="lg-a">Seleccionar</ Link></button>
-                <button className="pd-add"><Link to="/sales/addShipingCart/{product.id}"  className="lg-a">Agregar al carrito</ Link></button>
-            
-                <button className="pd-admin"><Link to="/product/productAdmin/{product.id}" className="pd-admin-a">Modificar </ Link></button>
-                
-            </div>
-        </article>
-
-   
-
-     
+        {products.length === 0 && <p>Cargando</p>}
+        {
+            products.map((product, i) => {
+                return (
+                    <article className="col-12 col-sm-6 col-lg-3 pd-product"  key={i}>
+                        <img className="pd-img-product" src={product.image} width="360" alt="beer"/>
+                        <div className="pd-datos-cerveza">
+                            <h4>{product.name}</h4>
+                            <h4>{product.price}</h4>
+                            <input type="hidden" value={product.id} name="IdProductToCart" />
+                            <button className="pd-seleccionar"><Link to="/product/productDetail/{product.id}" className="lg-a">Seleccionar</ Link></button>
+                            <button className="pd-add"><Link to="/sales/addShipingCart/{products.id}"  className="lg-a">Agregar al carrito</ Link></button>
+                        
+                            <button className="pd-admin"><Link to="/product/productAdmin/{products.id}" className="pd-admin-a">Modificar </ Link></button>
+                            
+                        </div>
+                    </article>
+                   
+                )
+            })
+        }    
+        
     </section>
-    <div className="testDiv"></div>
-    <div>
-                <h2>{product.name}</h2>
-                <h2>{product.price}</h2>
-            </div>
-
+    
     </div>
   );
 }

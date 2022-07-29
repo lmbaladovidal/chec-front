@@ -16,7 +16,7 @@ function GnHeader() {
 		fetch(url, {mode:'cors'})
 		.then(response=> response.json())
 		.then(response=>{
-			console.log(response)
+			//console.log(response)
 			setUser(response.data)})
 		.catch(error=>console.log(error))
 	},[])
@@ -28,6 +28,7 @@ function GnHeader() {
                     <Link to="/"><img src={logo} className="logo" alt="logo"/></Link>
                     <ul className="left-navbar">                
                         <li><Link to="/">Home </Link></li>
+                        <li><Link to="/dashboard">Dashboard </Link></li>
                         <li><Link to="/quienesSomos">Quienes somos </Link></li>
                         <li><Link to="/recetas/nuestrasRecetas">Nuestras Recetas </Link></li>
                     </ul>
