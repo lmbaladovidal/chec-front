@@ -35,7 +35,7 @@ function GnDbChart() {
      return (
         <section>
             
-                  <div className="container">
+            <div className="container">
                       <div className="row">
                           <div className="col-lg-8 my-3">
                               <div className="card rounded-0">
@@ -50,15 +50,16 @@ function GnDbChart() {
                                       <h5>{users[users.length-1].birthDate}</h5>                                    
                                     </div>
                                     <div>
-                                      <img src={users[users.length-1].avatar} className="avatar" ></img>
+                                      <img src={users[users.length-1].avatar} className="avatar" alt="avatar"></img>
                                     </div>
                                   </div>
                               </div>
                           </div>
                          
                       </div>
-                  </div>
-              </section>
+            </div>
+            
+        </section>
     )
 }
 
