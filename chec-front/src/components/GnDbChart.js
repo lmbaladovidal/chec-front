@@ -33,8 +33,7 @@ function GnDbChart() {
 
 
      return (
-        <section>
-            
+        <section>            
                   <div className="container">
                       <div className="row">
                           <div className="col-lg-8 my-3">
@@ -54,8 +53,7 @@ function GnDbChart() {
                                     </div>
                                   </div>
                               </div>
-                          </div>
-                         
+                          </div>                         
                       </div>
                   </div>
               </section>
