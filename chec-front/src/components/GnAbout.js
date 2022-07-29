@@ -1,4 +1,4 @@
-// import cerveceria1 from '../assets/images/logo/DSC_0007.jpg'
+// import cerveceria1 from "../assets/images/logo/DSC_0005.jpg"
 // import cerveceria2 from '../assets/images/logo/DSC_0007.jpg'
 // import cerveceria3 from '../assets/images/logo/DSC_0014.jpg'
 // import cerveceria4 from '../assets/images/logo/DSC_0030.jpg'
@@ -10,10 +10,10 @@ function GnAbout() {
             <div className="pd-quienes-somos-right">
                 {/* <div className="slider qs-img-container">
                     <ul>
-                        <li><img src={cerveceria1} alt="image-slider" className="slider-img" /></li>
-                        <li><img src={cerveceria2} alt="image-slider" className="slider-img" /></li>
-                        <li><img src={cerveceria3} alt="image-slider" className="slider-img" /></li>
-                        <li><img src={cerveceria4} alt="image-slider" className="slider-img" /></li>
+                        <li><img src={cerveceria1} alt="slider1" className="slider-img" /></li>
+                        <li><img src={cerveceria2} alt="slider2" className="slider-img" /></li>
+                        <li><img src={cerveceria3} alt="slider3" className="slider-img" /></li>
+                        <li><img src={cerveceria4} alt="slider4" className="slider-img" /></li>
                     </ul>
                 </div> */}
                 <div>
