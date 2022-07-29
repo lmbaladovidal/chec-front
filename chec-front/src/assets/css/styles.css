@@ -8,7 +8,9 @@
   width: 150;
   height: 150;
   border-radius: 50%;}
-
+.row{
+  width: 100%;
+}
 * {
   box-sizing: border-box;
   margin: 0;
