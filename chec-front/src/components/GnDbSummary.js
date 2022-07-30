@@ -2,66 +2,82 @@ import {useState, useEffect} from 'react'
 
 function GnDbSummary() {
 
-    const url= "http://localhost:3001/api/product/productPage"
+    const url= "http://localhost:3001/api/product/productList"
     const [products, setProduct] = useState([]);
     
 	useEffect(()=>{
-		console.log("Mount Component")
+		console.log("Mount Component products")
 		fetch(url, {mode:'cors'})
 		.then(response=> response.json())
         
 		.then(response=>{
-			console.log(response.data.cervezas)
-
+			// console.log(response.data.cervezas)
 			setProduct(response.data.cervezas)})         
 		.catch(error=>console.log(error))
 	},[])
 
-    const urlUsers= "http://localhost:3001/api/user/users"
-    const [users, setUsers] = useState([]);
+    useEffect(() => {
+        console.log('%cse actualizó el componente products', 'color:green');
+     }, [products])
+
+
+    const urlUsers= "http://localhost:3001/api/users"
+    const [usersTotal, setUsersTotal] = useState([]);
 
     useEffect(()=>{
-		console.log("Mount Component")
+		console.log("Mount Component all users")
 		fetch(urlUsers, {mode:'cors'})
 		.then(response=> response.json())
         
 		.then(response=>{
-			console.log(response.data)
-
-			setUsers(response.data)})         
+		//	console.log(response.meta.total)
+			setUsersTotal(response.meta.total)})         
 		.catch(error=>console.log(error))
 	},[])
+
+    useEffect(() => {
+        console.log('%cse actualizó el componente usersTotal', 'color:green');
+     }, [usersTotal])
+
 
     const urlSales= "http://localhost:3001/api/sales/salesList"
     const [sales, setSales] = useState([]);
 
     useEffect(()=>{
-		console.log("Mount Component")
+		console.log("Mount Component sales")
 		fetch(urlSales, {mode:'cors'})
 		.then(response=> response.json())
         
 		.then(response=>{
-			console.log(response.data)
-
+			// console.log(response.data)
 			setSales(response.data)})         
 		.catch(error=>console.log(error))
 	},[])
+
+    useEffect(() => {
+        console.log('%cse actualizó el componente sales', 'color:green');
+     }, [sales])
+
 
     const urlCategories= "http://localhost:3001/api/product/category"
     const [categories, setCategories] = useState([]);
 
     useEffect(()=>{
-		console.log("Mount Component")
+		console.log("Mount Component categories")
 		fetch(urlCategories, {mode:'cors'})
 		.then(response=> response.json())
         
 		.then(response=>{
-			console.log(response.data)
-
+			// console.log(response.data)
 			setCategories(response.data)})         
 		.catch(error=>console.log(error))
 	},[])
 
+    useEffect(() => {
+        console.log('%cse actualizó el componente categories', 'color:green');
+     }, [categories])
+
+     
 
    
 
@@ -82,7 +98,7 @@ function GnDbSummary() {
                                 <div className="col-lg-3 col-md-3 d-flex stat my-12">
                                     <div className="mx-auto">
                                         <h6 className="text-muted">No. de usuarios</h6>
-                                        <h3 className="font-weight-bold">{users.length}</h3>
+                                        <h3 className="font-weight-bold">{usersTotal}</h3>
                                         
                                     </div>
                                 </div>

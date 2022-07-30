@@ -17,19 +17,26 @@ function GnDbChart() {
 	// 	.catch(error=>console.log(error))
 	// },[])
         
-    const urlUsers= "http://localhost:3001/api/user/users"
+    const urlUsers= "http://localhost:3001/api/users"
     const [users, setUsers] = useState([]);
 
     useEffect(()=>{
-		console.log("Mount Component")
+		console.log("Mount Component users desde GnChart")
 		fetch(urlUsers, {mode:'cors'})
 		.then(response=> response.json())
         
 		.then(response=>{
-			console.log("USUARIOS: "+response.data)
-			setUsers(response.data)})         
+		
+      let usersResponse = response.data.users
+    
+			setUsers(usersResponse[usersResponse.length-1])
+    })         
 		.catch(error=>console.log(error))
-	},[])
+	  },[])
+
+  useEffect(() => {
+    console.log('%cse actualizó el componente users desde GnChart', 'color:green');
+ }, [users])
 
 
      return (
@@ -43,13 +50,12 @@ function GnDbChart() {
                                   </div>
                                   <div className="card-body">
                                     <div>
-                                      <h3>{users[users.length-1].name+" "+users[users.length-1].lastName}</h3>
-                                      <h5>{users[users.length-1].address}</h5>
-                                      <h5>{users[users.length-1].email}</h5>
-                                      <h5>{users[users.length-1].birthDate}</h5>                                    
+                                      <h3>{users.name}</h3>
+                                      <h5>{users.email}</h5>
+                                                  
                                     </div>
                                     <div>
-                                      <img src={users[users.length-1].avatar} className="avatar" alt-prop=""></img>
+                                      <img src={users.avatar} className="avatar" alt="avatar"></img>
                                     </div>
                                   </div>
                               </div>
