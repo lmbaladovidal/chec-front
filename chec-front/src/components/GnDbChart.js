@@ -49,7 +49,7 @@ function GnDbChart() {
                                       <h5>{users[users.length-1].birthDate}</h5>                                    
                                     </div>
                                     <div>
-                                      <img src={users[users.length-1].avatar} className="avatar" ></img>
+                                      <img src={users[users.length-1].avatar} className="avatar" alt-prop=""></img>
                                     </div>
                                   </div>
                               </div>
