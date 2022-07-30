@@ -12,7 +12,7 @@ function GnDashboard() {
 
           <div className="w-100">
             <GnDbNavbar />
-            <div id="content" class="bg-grey w-100">
+            <div id="content" className="bg-grey w-100">
                 <GnDbSummary/>
                 <GnDbChart/>
             </div>
