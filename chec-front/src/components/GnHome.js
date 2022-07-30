@@ -5,7 +5,7 @@ import PdProducts from './PdProducts'
 
 function GnHome() {
 
-    const url= "http://localhost:3001/api/product/productPage"
+    const url= "http://localhost:3001/api/product/productList"
     const [products, setProduct] = useState([]);
     
 	useEffect(()=>{
