@@ -4,6 +4,8 @@ import GnFooter from './GnFooter';
 import GnAbout from './GnAbout';
 import GnHome from './GnHome';
 import GnDashboard from './GnDashboard';
+import GnDbPrdList from './GnDbPrdList';
+import GnDbUsrList from './GnDbUsrList';
 
 
 function App() {
@@ -16,6 +18,9 @@ function App() {
         <Route exact path="/" element={<GnHome/>} />
         <Route path='/quienesSomos' element={<GnAbout/>}/>
         <Route path='/dashboard' element={<GnDashboard/>}/>
+        <Route path='/dashboard/productList' element={<GnDbPrdList/>}/>
+        <Route path='/dashboard/usersList' element={<GnDbUsrList/>}/>
+         
       </Routes>
 
      <GnFooter/>
