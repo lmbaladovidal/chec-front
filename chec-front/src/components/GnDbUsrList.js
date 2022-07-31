@@ -56,10 +56,10 @@ function GnDbUsrList() {
                   <tr key={i}>
                     <td className="td-user">{user.id}</td>
                     <td className="td-user">{user.name}</td>
-                    <td className="td-user">{user.name}</td>
-                    <td className="td-user">{user.mail}</td>
+                    <td className="td-user">{user.lastName}</td>
+                    <td className="td-user">{user.email}</td>
                     <td className="td-user">
-                      <img src={users.avatar} width="30px" alt="avatar"></img>
+                      <img src={user.avatar} width="30px" alt="avatar"></img>
                     </td>
                     
                   </tr>
