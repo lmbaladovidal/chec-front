@@ -91,15 +91,15 @@ function GnDbChart() {
         <div className="row">
           {/* LAST USER */}
 
-          <div className="col-lg-3 my-3">
+          <div className="col-lg-3 my-2 mx-2">
             <div className="row">
               <div className="card">
                 <div class="card-header"> Último usuario creado </div>
                 <img
                   src={users.avatar}
-                  className="avatar mx-12 my-12" 
+                  className="avatarFront " 
                   alt="avatar"
-                  
+                                   
                 ></img>
                 <div className="card-body">
                   <h5 className="card-title">{users.name} {users.lastName}</h5>
@@ -112,10 +112,10 @@ function GnDbChart() {
           </div>
 
           {/* CATEGORIES */}
-          <div className="col">
+          <div className="col-6 my-2">
             <div className="col-lg-8 mb-4">
               <div className="card shadow mb-4">
-                <div className="card-header py-3">
+                <div className="card-header py-2">
                   <h5 className="m-0 font-weight-bold text-gray-800">
                     Productos activos por categoría
                   </h5>

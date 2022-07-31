@@ -58,6 +58,31 @@ a:hover {
   border-right: 1px solid var(--grey);
 }
 
+li{
+  list-style: none;
+}
+.lead2{
+flex-wrap: wrap;
+margin-right: 15px;
+font-size: 1.25rem;
+font-weight: 300;
+}
+.list-group-item2.active {
+  z-index: 2;
+  color: var(--bs-list-group-active-color);
+  background-color: #6c757d;
+  border-color: #949494;
+  margin: 0px ;
+  text-align: center;
+}
+.avatarFront{
+  width:190px;
+  margin:10px auto;
+  text-align: center;
+  border-radius: 50%;
+
+}
+
 
 @media (max-width: 768px) {
   #sidebar-container {
@@ -66,4 +91,6 @@ a:hover {
   .stat {
       border: 0;
   }
+
+  
 }
