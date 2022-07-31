@@ -88,21 +88,21 @@ function GnDbSummary() {
                     <div className="card rounded-0">
                         <div className="card-body">
                             <div className="row">
-                                <div className="col-lg-3 col-md-3 d-flex stat my-12">
+                                <div className="col-lg-3 col-md-3 col-sm-6  col-12 d-flex stat my-12">
                                     <div className="mx-auto">
                                         <h6 className="text-muted">Productos activos</h6>
                                         <h3 className="font-weight-bold">{products.length}</h3>
                                         
                                     </div>
                                 </div>
-                                <div className="col-lg-3 col-md-3 d-flex stat my-12">
+                                <div className="col-lg-3 col-md-3 col-sm-6 col-xs-12 d-flex stat my-12">
                                     <div className="mx-auto">
                                         <h6 className="text-muted">No. de usuarios</h6>
                                         <h3 className="font-weight-bold">{usersTotal}</h3>
                                         
                                     </div>
                                 </div>
-                                <div className="col-lg-3 col-md-3 d-flex stat my-12">
+                                <div className="col-lg-3 col-md-3 col-sm-6  col-xs-12 d-flex stat my-12">
                                     <div className="mx-auto">
                                         <h6 className="text-muted">Ventas</h6>
                                         <h3 className="font-weight-bold">{sales.length}</h3>
@@ -110,7 +110,7 @@ function GnDbSummary() {
                                     </div>
                                 </div>
                                
-                                <div className="col-lg-3 col-md-3 d-flex stat my-12">
+                                <div className="col-lg-3 col-md-3 col-sm-6  col-xs-12 d-flex my-12">
                                     <div className="mx-auto">
                                         <h6 className="text-muted">Categorias</h6>
                                         <h3 className="font-weight-bold">{categories.length}</h3>
