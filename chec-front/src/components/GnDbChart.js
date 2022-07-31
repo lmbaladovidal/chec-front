@@ -49,6 +49,7 @@ function GnDbChart() {
 
       .then((response) => {
         let usersResponse = response.data.users;
+        console.log(usersResponse[usersResponse.length - 1]);
 
         setUsers(usersResponse[usersResponse.length - 1]);
       })
@@ -62,6 +63,27 @@ function GnDbChart() {
     );
   }, [users]);
 
+  const urlPdByCategory = "http://localhost:3001/api/product/productList";
+  const [productByCategoryName, setPdByCategory] = useState([]);
+
+  useEffect(() => {
+    console.log("Mount Component PdByCategory");
+    fetch(urlPdByCategory, { mode: "cors" })
+      .then((response) => response.json())
+
+      .then((response) => {
+        console.log("BYCATEGORY")
+        console.log(response.productByCategoryName);
+        setPdByCategory(response.productByCategoryName);
+      })
+      .catch((error) => console.log(error));
+  }, []);
+
+  useEffect(() => {
+    console.log("%cse actualizó el componente PdByCategory", "color:green");
+  }, [productByCategoryName]);
+
+
   return (
     <section>
       <div className="container text-center">
@@ -69,17 +91,18 @@ function GnDbChart() {
         <div className="row">
           {/* LAST USER */}
 
-          <div className="col-lg-6 my-3">
+          <div className="col-lg-3 my-3">
             <div className="row">
               <div className="card">
                 <div class="card-header"> Último usuario creado </div>
                 <img
                   src={users.avatar}
-                  className="avatar mx-3 my-3"
+                  className="avatar mx-12 my-12" 
                   alt="avatar"
+                  
                 ></img>
                 <div className="card-body">
-                  <h5 className="card-title">{users.name}</h5>
+                  <h5 className="card-title">{users.name} {users.lastName}</h5>
                 </div>
                 <ul className="list-group list-group-flush">
                   <li className="list-group-item">{users.email}</li>
@@ -90,7 +113,7 @@ function GnDbChart() {
 
           {/* CATEGORIES */}
           <div className="col">
-            <div className="col-lg-10 mb-4">
+            <div className="col-lg-8 mb-4">
               <div className="card shadow mb-4">
                 <div className="card-header py-3">
                   <h5 className="m-0 font-weight-bold text-gray-800">
@@ -98,20 +121,20 @@ function GnDbChart() {
                   </h5>
                 </div>
                 <ol class="list-group list-group-numbered">
-                {categories.length === 0 && <p>Cargando</p>}
-                {categories.map((category, i) => {
+                {productByCategoryName.length === 0 && <p>Cargando</p>}
+                {productByCategoryName.map((info, i) => {
                   return (
                     <li class="list-group-item d-flex justify-content-between align-items-start"  key={i}>
                       <div class="ms-2 me-auto">
-                        <div class="fw-bold">{category.description}</div>
-                        
+                        <div class="fw-bold">{info.description}</div>
                       </div>
-                      <span class="badge bg-primary rounded-pill">14</span>
+                      <span class="badge bg-primary rounded-pill">{info.CountProduct}</span>
                     </li>
                     
                   );
                 })}
                 </ol>
+                
               </div>
             </div>
           </div>
