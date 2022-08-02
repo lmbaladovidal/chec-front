@@ -1,3 +1,16 @@
+.card-body{
+  display: flex;
+}
+
+.avatar{
+  max-width: 300px;
+  max-height: 300px;
+  width: 150;
+  height: 150;
+  border-radius: 50%;}
+.row{
+  width: 100%;
+}
 * {
   box-sizing: border-box;
   margin: 0;
