@@ -31,7 +31,7 @@ function GnDbPrdList() {
         <div id="content" className="bg-grey w-100">
           <section className="container my-3">
             <ul className="list-group">
-              <li className="list-group-item2 active col-lg-12 my-2" aria-current="true">
+              <li className="list-group-item2 col-lg-12 my-2" aria-current="true">
                 Lista de productos
               </li>
               
@@ -45,8 +45,11 @@ function GnDbPrdList() {
                         )
                     })
                 }
+              
             </ul>
+            
           </section>
+          
         </div>
       </div>
     </div>

@@ -3,6 +3,7 @@ import {useState, useEffect} from 'react'
 import imageHome from '../assets/images/guarda.png'
 import PdProducts from './PdProducts'
 
+
 function GnHome() {
 
     const url= "http://localhost:3001/api/product/productList"
@@ -23,32 +24,42 @@ function GnHome() {
   return (
     <div >
     
-    <section className="ind-top-test">
-    
-    <div className="right-content-test">
-        <article className="art-3">
+    <section className="ind-top-test ">
+    <div className='container-fluid'>
+    <div className="right-content-test ">
+        <article className="art-4 ">
         <img src={imageHome} alt="imagen-home"/>
         <p>Cuando abrimos una cerveza <i>CHEC</i>, hecha con Calidad y para todos los gustos, es seguramente porque  estamos disfrutando un momento de placer, solos o acompañados de familia, amigos y anécdotas para compartir. Compartiendo una picada, un asado o una buena comida. Mientras disfrutamos, se pierde noción del tiempo y la sobremesa se hace más extensa.</p>
         <h3> Un aplauso para el anfitrión, y <i>CHEC </i>  te asegura un próximo encuentro... <i className="fas fa-beer"> </i>  </h3>
         </article>
     </div>
+    </div>
     </section>
-
-    <section className="bottom-content">
-        {products.length === 0 && <p>Cargando</p>}
-        {
-            products.map((product, i) => {
-                return (
-                    <PdProducts
-                        id={product.id}
-                        name={product.name}
-                        price={product.price}
-                        image={product.image}
-                    />                   
-                )
-            })
-        }           
-    </section>
+    
+    <div className='container'>
+        <div className='row'>
+            <section className="bottom-content mx-0 ">
+                {products.length === 0 && <p>Cargando</p>}
+                {
+                    products.map((product, i) => {
+                        return (
+                            
+                        <PdProducts                                     
+                            id={product.id}
+                            name={product.name}
+                            price={product.price}
+                            image={product.image}/>
+                         
+                          
+                        )
+                        
+                    })
+                        
+                }  
+                    
+            </section>
+        </div>
+    </div>
     
     </div>
   );
