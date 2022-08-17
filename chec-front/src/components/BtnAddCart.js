@@ -1,6 +1,6 @@
 import { Link} from 'react-router-dom';
-
-
+import React from 'react'
+import '../StyleSheets/BtnAddCart.css'
 
 
 const BtnAddCart = () => {
@@ -14,7 +14,7 @@ const BtnAddCart = () => {
             <Link to="/product/productDetail/{props.id}" />Seleccionar</button>
                        
             <button type="button" className="btn btn-outline-warning mb-3 text-dark">
-            <Link to="/sales/addShipingCart/{props.id}" />A Carrito
+            <Link to="/sales/addShipingCart/{props.id}" />Agregar a Carrito
             </button>
             
             <button type="button" className="btn  btn-outline-danger mb-3 btn-sm" style={hidden} >

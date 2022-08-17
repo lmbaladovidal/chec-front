@@ -1,0 +1,14 @@
+.pd-products {
+    flex: 30%;
+    margin: 8px;
+    text-align: center;
+    box-shadow: 8px 6px 10px 0px rgb(149, 149, 149);
+    border-radius: 10px;
+  }
+  
+ .pd-img-productRT {
+    width: 100%;
+    padding: 20px;
+    max-width: 500px;
+    border-radius: 20px;
+  }
