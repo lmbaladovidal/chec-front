@@ -1,6 +1,7 @@
 import {useState, useEffect} from 'react'
 //import {Link} from 'react-router-dom'
 import imageHome from '../assets/images/guarda.png'
+import '../StyleSheets/GnHome.css'
 import PdProducts from './PdProducts'
 
 
@@ -25,20 +26,23 @@ function GnHome() {
     <div >
     
     <section className="ind-top-test ">
-    <div className='container-fluid'>
-    <div className="right-content-test ">
-        <article className="art-4 ">
-        <img src={imageHome} alt="imagen-home"/>
-        <p>Cuando abrimos una cerveza <i>CHEC</i>, hecha con Calidad y para todos los gustos, es seguramente porque  estamos disfrutando un momento de placer, solos o acompañados de familia, amigos y anécdotas para compartir. Compartiendo una picada, un asado o una buena comida. Mientras disfrutamos, se pierde noción del tiempo y la sobremesa se hace más extensa.</p>
-        <h3> Un aplauso para el anfitrión, y <i>CHEC </i>  te asegura un próximo encuentro... <i className="fas fa-beer"> </i>  </h3>
-        </article>
-    </div>
-    </div>
+        <div className='container-fluid'>
+        <div className="right-content-test ">
+            <article className="art-4 ">
+            <img src={imageHome} alt="imagen-home"/>
+            <h2>Cuando abris una cerveza <i>CHEC</i>, seguramente estás disfrutando de un buen momento con vos, o con familia, amigos y anécdotas para contar.</h2>
+            
+            <h3><>Una picada, asado o cualquier comida de por medio, la noción del tiempo se pierde y se extiende la sobremesa..</>
+            ¡ Un aplauso para el anfitrión ! !</h3>
+            <h2><strong>   <i>CHEC </i>  te asegura un próximo encuentro... <i className="fas fa-beer"> </i> </strong> </h2>
+            </article>
+        </div>
+        </div>
     </section>
     
-    <div className='container'>
-        <div className='row'>
-            <section className="bottom-content ">
+    <div className='container-fluid row '>
+        <div className='row mx-auto' style={{justifyContent:"center"}}>
+       
                 {products.length === 0 && <p>Cargando</p>}
                 {
                     products.map((product, i) => {
@@ -56,8 +60,7 @@ function GnHome() {
                     })
                         
                 }  
-                    
-            </section>
+        
         </div>
     </div>
     

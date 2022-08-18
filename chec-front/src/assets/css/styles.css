@@ -1604,13 +1604,13 @@ section.ind-top {
   border-bottom: 5px #949494 solid;
   border-top: 2px #949494 solid;
 }
-.ind-top-test {
+/* .ind-top-test {
   background-image: url("../images/logo/CERVECERIA-CHEC-RGB-DIGITAL.png");
   background-size: cover;
   background-position: center;
   min-height: 300px;
-}
-
+} */
+/* 
 .right-content-test {
   display: flex;
   margin: auto;
@@ -1627,7 +1627,7 @@ section.ind-top {
 }
 .right-content-test h3 {
   font-size: 14px;
-}
+} */
 
 /*slider index-top*/
 .slider {
