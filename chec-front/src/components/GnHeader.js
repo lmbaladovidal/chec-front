@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 //import logo from '../assets/images/logo/540x540sqr.png';
 import GnSearchBar from '../components/GnSearchBar.js'
 import logo2 from '../assets/images/logo/checMinimTransp.png'
+import Avatar from '../assets/images/fav-icon.png'
 import '../StyleSheets/GnHeader.css';
 
 
@@ -44,7 +45,7 @@ function GnHeader() {
 
               
               
-              <ul className="navbar-nav navbar-collapse " style={{alignItems:'flex-start'}} >
+              <ul className="navbar-nav "  >
 
                 {/* if (locals && locals.isLogged) { */}
                   
@@ -52,31 +53,36 @@ function GnHeader() {
                   type="button"  
                   data-bs-toggle="collapse" 
                   data-bs-target="#MenuNav2"
-                  aria-controls="MenuNav2" > 
-                  <img src="/images/avatars/<%= locals.userLogged.avatar %>" alt="--" className='nav-link text-warning '/>
+                  aria-controls="MenuNav2" 
+                  aria-expanded="true" 
+                  style={{justifyContent:"end"}} > 
+
+                  {/* <img src="/images/avatars/<%= locals.userLogged.avatar %>" alt="--" className='nav-link text-warning '/> */}
+                  <img src={Avatar} width="10%" alt="--" className="rounded-circle rounded-5 navbarRT"/>
                   </span>
                                 
 
                 {/* <a> locals.userLogged.name </a>  */}
 
-                  <ul className=" text-light d " data-bs-toggle="collapse " data-bs-target="#MenuNav2">
+                  <ul className="nav-link " data-bs-toggle="collapse " data-bs-target="#MenuNav2">
 
-                      <li  id="MenuNav2" className="text-light  dropdown-item ms-3" ><Link to="/dashboard"  >Dashboard </Link>
+                      <li  id="MenuNav2" className="dropdown-item ms-3" >
+                        <Link to="/dashboard" className='nav-link text-light navbarRT'> Dashboard </Link>
                       </li>
                       <li id="MenuNav2" className="text-light dropdown-item ms-3">
-                        <Link to="/users/profile" >Mi perfil </Link>
+                        <Link to="/users/profile" className='nav-link text-light navbarRT'> Mi perfil </Link>
                       </li>
                       
                       <li id="MenuNav2" className="text-light  dropdown-item ms-3">
-                        <Link to="/users/logout" >Salir</Link>
+                        <Link to="/users/logout" className='nav-link text-light navbarRT'> Salir </Link>
                       </li>
                   </ul>
-                             
-                {/* } else if(locals && !locals.isLogged) { */}
-              {/* <li className='nav-link text-light '><Link to="/users/login" className=" navbarRT nav-link text-light ">Ingresá <i className="fas fa-sign-in-alt "></i></Link></li> */}
-              {/* } else { */}
-              {/* <li><span>No hay locals!</span></li> */}
-              {/* }  */}
+{/*                              
+                } else if(locals && !locals.isLogged) {
+               <li className='nav-link text-light '><Link to="/users/login" className=" navbarRT nav-link text-light ">Ingresá <i className="fas fa-sign-in-alt "></i></Link></li> 
+               } else { 
+               <li><span>No hay locals!</span></li> 
+                } */}
 
               </ul>
 
@@ -84,16 +90,10 @@ function GnHeader() {
 
           </div>
         
-
-
         </nav>
-        <div className="row">
+       
         <GnSearchBar/>
-        
-        </div>
-
-
-
+           
     </div>
 
 
