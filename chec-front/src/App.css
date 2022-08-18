@@ -126,67 +126,6 @@ article.art-4 i {
   transform: scale(1.5);
  }
 
-/* .pd-products {
-  flex: 30%;
-  margin: 8px;
-  text-align: center;
-  box-shadow: 8px 6px 10px 0px rgb(149, 149, 149);
-  border-radius: 10px;
-} */
-
- /* .pd-img-productRT {
-  width: 100%;
-  padding: 20px;
-  max-width: 500px;
-  border-radius: 20px;
-} */
-/* 
-.main-navbarRT {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-.navbarRT-btn{
- padding: 10px;
- padding-left: 0px;
- border-radius: 8px;
- cursor: pointer;
- border-style:none;
- border:none;
- color: #ff6200;
-  
-}
-.navbarRT-btn:hover{
-  color:#ff8a00;
-  border-style: solid;
-  border-bottom-color: #ff5200;
-  border-top:none;
-  border-left:none;
-  border-right:none;
-  border-radius: 0px;
-  cursor: pointer;
-}
-
-.navbarRT:hover{
-  text-rendering: rgb(255, 98, 0);
-  text-shadow: 1px 0px rgb(255, 98, 0);
-}
-
-
-.main-navbarRT ul .dropdown-menu-container {
-  list-style: none;
-  display: flex;
-  justify-content: space-around;
-  color: white;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  align-items: center;  
-}
-
- */
-
-
 
 
 
