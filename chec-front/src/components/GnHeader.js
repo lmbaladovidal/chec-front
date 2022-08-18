@@ -60,8 +60,8 @@ function GnHeader() {
                   {/* <img src="/images/avatars/<%= locals.userLogged.avatar %>" alt="--" className='nav-link text-warning '/> */}
                   <img src={Avatar} width="10%" alt="--" className="rounded-circle rounded-5 link-warning"/>
                   </span>
-                {/* <a> locals.userLogged.name </a>  */}
                                 
+                {/* <a> locals.userLogged.name </a>  */}
 
 
                   <ul className="nav-link " data-bs-toggle="collapse " data-bs-target="#MenuNav2">
