@@ -38,7 +38,7 @@ function GnHome() {
     
     <div className='container'>
         <div className='row'>
-            <section className="bottom-content mx-0 ">
+            <section className="bottom-content ">
                 {products.length === 0 && <p>Cargando</p>}
                 {
                     products.map((product, i) => {

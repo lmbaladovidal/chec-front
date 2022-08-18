@@ -7,9 +7,7 @@ import '../StyleSheets/GnHeader.css';
 
 
 function GnHeader() {
-  const align = {
-    alignItems:'flex-start'
-  }
+
 
   return (
     <div  >
@@ -32,12 +30,21 @@ function GnHeader() {
                 <li className="nav-link "><Link to="/quienesSomos" className='navbarRT nav-link text-light'>Quienes somos </Link></li>
                 <li className="nav-link "><Link to="/recetas/nuestrasRecetas" className='navbarRT nav-link text-light'>Nuestras Recetas </Link></li>
                 <li className="nav-link "><Link to="/product/productPage" className="navbarRT nav-link text-light ">Tienda</Link> </li>
-                <li className="nav-link "><Link to="/sales/productCart" className="navbarRT nav-link text-light"><i className="fas fa-shopping-cart"></i></Link> </li>
+                
+                <li className="nav-link position-relative"  >
+                  <Link to="/sales/productCart" className="navbarRT nav-link text-light">
+                    <i className="fas fa-shopping-cart position-relative" width="25px"></i>
+                    <span className="position-absolute top-1 right-start-100 translate-middle badge border border-light rounded-pill bg-danger p-1">
+                    <span className="visually-hidden"></span>
+                    </span>
+                  </Link> 
+                </li>
+
               </ul>
 
               
               
-              <ul className="navbar-nav navbar-collapse " style={align} >
+              <ul className="navbar-nav navbar-collapse " style={{alignItems:'flex-start'}} >
 
                 {/* if (locals && locals.isLogged) { */}
                   
