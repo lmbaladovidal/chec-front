@@ -84,13 +84,13 @@ function GnDbSummary() {
 
     return (
         <section className="bg-mix py-3">
-                <div className="container">
-                    <div className="card rounded-0">
-                        <div className="card-body">
+                <div className="container  ">
+                    <div className="card rounded-2 ">
+                        <div className="card-body callout-info">
                             <div className="row">
                                 <div className="col-lg-3 col-md-3 col-sm-6  col-12 d-flex stat my-12">
-                                    <div className="mx-auto">
-                                        <h6 className="text-muted">Productos activos</h6>
+                                    <div className="mx-auto callout-info boder border-left-danger">
+                                        <h6 className="text-muted ">Productos activos</h6>
                                         <h3 className="font-weight-bold">{products.length}</h3>
                                         
                                     </div>
