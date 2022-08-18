@@ -20,13 +20,13 @@ return(
          
                   
                   
-        <div class="btn-group me-2 ms-2 my-2" role="group" aria-label="Second group">
-            <button type="button" class="btn btn-success rounded-5 opacity-70">
+        <div class=" me-2 ms-3 my-2" role="group" aria-label="Second group">
+            <button type="button" className="btn btn-success rounded-5 opacity-70 me-1">
                 
-                <i class="bi bi-whatsapp"></i>
+                <i class="bi bi-whatsapp nav-link text-light link-warning"></i>
                 
             </button>
-            <button type="button" class="btn btn-danger rounded-5 opacity-75"><i class="bi bi-instagram"></i></button>
+            <button type="button" class="btn btn-danger rounded-5 opacity-75 "><i className="bi bi-instagram nav-link text-light link-warning "></i></button>
             
         </div>
         </div>
