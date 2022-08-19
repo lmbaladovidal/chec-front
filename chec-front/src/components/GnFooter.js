@@ -1,5 +1,6 @@
 import { Link} from 'react-router-dom';
 import logo from '../assets/images/logo/540x540sqr.png'
+import '../StyleSheets/GnFooter.css'
 
 
 

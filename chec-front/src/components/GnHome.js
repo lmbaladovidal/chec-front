@@ -3,6 +3,7 @@ import {useState, useEffect} from 'react'
 import imageHome from '../assets/images/guarda.png'
 import '../StyleSheets/GnHome.css'
 import PdProducts from './PdProducts'
+import GnHomeCard from './GnHomeCard'
 
 
 function GnHome() {
@@ -26,18 +27,26 @@ function GnHome() {
     <div >
     
     <section className="ind-top-test ">
-        <div className='container-fluid'>
-        <div className="right-content-test ">
-            <article className="art-4 ">
-            <img src={imageHome} alt="imagen-home"/>
-            <h2>Cuando abris una cerveza <i>CHEC</i>, seguramente estás disfrutando de un buen momento con vos, o con familia, amigos y anécdotas para contar.</h2>
+         <GnHomeCard/>
+         
+        <div className='' >
             
-            <h3><>Una picada, asado o cualquier comida de por medio, la noción del tiempo se pierde y se extiende la sobremesa..</>
-            ¡ Un aplauso para el anfitrión ! !</h3>
-            <h2><strong>   <i>CHEC </i>  te asegura un próximo encuentro... <i className="fas fa-beer"> </i> </strong> </h2>
-            </article>
+            {/* <article className="card" style={{width:"35%", opacity:"75%"}}>
+            
+            {/* <img src={imageHome} alt="imagen-home" className='card-img-top' width="80" /> */}
+{/*            
+            <div className='card-body my-1 row'>
+            <p className="card-text text-center">Cuando abris una cerveza <i>CHEC</i>, seguramente estás disfrutando de un buen momento con vos, o con familia, amigos y anécdotas para contar.</p>
+            
+            <p className="card-text text-center">Una picada, asado o cualquier comida de por medio, la noción del tiempo se pierde y se extiende la sobremesa... </p>
+            <p className="card-text text-center"> <h4><em>¡ Un aplauso para el anfitrión !</em></h4></p>
+            </div>
+            <h3 className='text-center'><strong>   <i>CHEC </i>  te asegura un próximo encuentro... </strong> </h3>
+            <h3 className='text-center'><strong> <i className="fas fa-beer"> </i> <i class="bi bi-emoji-wink"></i></strong> </h3>
+            </article> */} 
+        
         </div>
-        </div>
+
     </section>
     
     <div className='container-fluid row '>

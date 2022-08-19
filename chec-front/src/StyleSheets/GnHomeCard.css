@@ -1,0 +1,86 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+  section.homeCard {
+    display:flex;
+    flex-wrap: wrap;
+    align-items:center;
+    justify-content:center;
+    opacity:70%;
+    background: #ff6200;
+
+  }
+
+  .wrapper{
+   display: flex;
+   flex-wrap: wrap;
+   text-align: start;
+
+  }
+  .wrapper .static-text{
+    margin:auto;
+    color: white;
+    font-size: 40px;
+    font-weight: 400;
+    text-align: center;
+    align-items: flex-end;
+  }
+  .wrapper .dynamic-txts{
+    margin-left: auto;
+    padding-left: 2px;
+    height: 90px;
+    line-height:90px;
+    overflow: hidden;
+  }
+
+  .dynamic-txts ul{
+    margin: auto;
+    
+  }
+  .dynamic-txts li{
+    margin-left: 0px;
+    list-style: none;
+    color: white;
+    font-size: 40px;
+    font-weight: 400;
+    position: relative;
+    top: 5px;
+    animation: slide 10s steps(5) infinite;
+    
+
+  }
+
+  @keyframes slide{
+    100% {top:-440px }
+  }
+
+  .dynamic-txts li span{
+    position: relative;
+    margin: 5px 0px;  
+    line-height: 1px;
+    
+
+  }
+  .dynamic-txts li span::after{
+    content:"";
+    position: absolute;
+    left: 0px;
+    margin-top: 10px;
+    height: 120%;
+    width:100%;
+    background: #ff6200;
+    border-left: 3px solid hsl(0, 2%, 9%);
+    animation: typing 2s steps(8) infinite;
+  }
+
+  @keyframes typing{
+    40%, 60%{
+        left:calc(100% + 5px);
+    }
+    100%{ 
+        left:0;
+    }
+ }

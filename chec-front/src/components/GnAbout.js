@@ -2,6 +2,8 @@
 // import cerveceria2 from '../assets/images/logo/DSC_0007.jpg'
 // import cerveceria3 from '../assets/images/logo/DSC_0014.jpg'
 // import cerveceria4 from '../assets/images/logo/DSC_0030.jpg'
+import GnHomeCard from '../components/GnHomeCard'
+import '../StyleSheets/GnAbout.css'
 
 function GnAbout() {
     return (
@@ -38,14 +40,21 @@ function GnAbout() {
                         Cervezas Hechas En Casa, con Calidad.</p>
                     <p>¡Una rica selecección de variedades para compartir con vos!</p>
                 </div>
-            </div>
+                </div>
+               
+               <div>
 
-            
+                <GnHomeCard/>
+                </div>
 
         </section>
+
+
+        
+        );
+
        
      
-    );
   }
   
   export default GnAbout;
