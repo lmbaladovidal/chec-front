@@ -21,7 +21,10 @@ function PdProducts(props) {
             </div>
 
             <div className="card-body ">
-            <BtnAddCart/>
+                    <BtnAddCart
+                        name="Agregar a carrito"
+                        secondName="ver detalles"
+                        admin="Modificar"/>
                 
             </div>
 
