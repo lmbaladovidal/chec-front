@@ -44,7 +44,13 @@ function GnAbout() {
                
                <div>
 
-                <GnHomeCard/>
+                <GnHomeCard
+                title= " Asi es Chec: "
+                line1= " Riquísima"
+                line2= " Comprometida con la Calidad"
+                line3= " De Gerli directo a vos"
+                line4= {<strong><em>¡Disfrutala bien fria!</em> </strong>}
+                />
                 </div>
 
         </section>

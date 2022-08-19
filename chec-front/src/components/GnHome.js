@@ -27,7 +27,12 @@ function GnHome() {
     <div >
     
     <section className="ind-top-test ">
-         <GnHomeCard/>
+         <GnHomeCard
+         title= "Cuando Abris una CHEC..."
+         line1={<strong><em>¡ Disfrutala !</em></strong>}
+         line2="con amigos "
+         line3="con familia"
+         line4="o sólo para vos..."/>
          
         <div className='' >
             
